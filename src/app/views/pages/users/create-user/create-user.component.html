@@ -1,0 +1,56 @@
+<main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1>Nouveau utilisateurs</h1>
+          <div class="top-right-button-container mb-4">
+            <button routerLink="/users" type="button" class="btn btn-primary btn-lg top-right-button link-type">Liste des membres</button>
+          </div>
+          <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+            <ol class="breadcrumb pt-0">
+              <li class="breadcrumb-item">
+                <a routerLink="/dashbaord">Dossier</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a routerLink="/users">Utilisateurs</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Nouveau utilisateur</li>
+            </ol>
+          </nav>
+          <div class="separator mb-5"></div>
+        </div>
+      </div>
+      <form method="post" (ngSubmit)="saveMember()">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5>Informations personnel</h5>
+                <div class="separator mb-4"></div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="Profil">Profil</label>
+                      <input type="text"
+                             [(ngModel)]="newUser.profils"
+                             class="form-control"
+                             name="profils"
+                             id="profils"
+                             placeholder="profils">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="creationDate">creationDate</label>
+                      <input type="text"
+                             [(ngModel)]="newUser.creationDate">
+                            
+                <button type="submit" class="float-right btn btn-primary mb-0">Enregistrer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  
