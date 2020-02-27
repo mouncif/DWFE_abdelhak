@@ -9,7 +9,7 @@ export class UsersService {
 
   private url = "http://localhost:3000/users"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   findAll(){
     return this.http.get<User[]>(this.url);

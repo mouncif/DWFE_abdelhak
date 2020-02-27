@@ -8,11 +8,12 @@ import { FooterComponent } from './views/components/footer/footer.component';
 import { NavbarComponent } from './views/components/navbar/navbar.component';
 import { SidebarComponent } from './views/components/sidebar/sidebar.component';
 import { CreateUserComponent } from './views/pages/users/create-user/create-user.component';
-import { ShowUserComponent } from './views/pages/users/show-user/show-user.component';
 import { EditUserComponent } from './views/pages/users/edit-user/edit-user.component';
 import { UsersService} from './services/users.service';
 import { MainComponent } from './views/layouts/main/main.component';
 import { AuthComponent } from './views/layouts/auth/auth.component';
+import { ListUserComponent } from './views/pages/users/list-user/list-user.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,15 +22,16 @@ import { AuthComponent } from './views/layouts/auth/auth.component';
     NavbarComponent,
     SidebarComponent,
     CreateUserComponent,
-    ShowUserComponent,
     EditUserComponent,
     MainComponent,
     AuthComponent,
+    ListUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent],
