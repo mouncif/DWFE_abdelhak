@@ -14,4 +14,8 @@ export class UsersService {
   findAll(){
     return this.http.get<User[]>(this.url);
   }
+
+  delete(id){
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

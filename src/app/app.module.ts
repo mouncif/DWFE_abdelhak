@@ -11,6 +11,8 @@ import { CreateUserComponent } from './views/pages/users/create-user/create-user
 import { ShowUserComponent } from './views/pages/users/show-user/show-user.component';
 import { EditUserComponent } from './views/pages/users/edit-user/edit-user.component';
 import { UsersService} from './services/users.service';
+import { MainComponent } from './views/layouts/main/main.component';
+import { AuthComponent } from './views/layouts/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { UsersService} from './services/users.service';
     CreateUserComponent,
     ShowUserComponent,
     EditUserComponent,
+    MainComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
