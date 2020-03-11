@@ -1,0 +1,85 @@
+
+<div  id='cssmenu'>
+    <ul>
+        <li><a routerLink="/addproduct">Add product</a></li>
+        <li><a routerLink="/listProducts">List products</a></li>
+      </ul>
+  </div>
+<br><br>
+
+<div class="card mb-3" style="background-color: #858585;">
+    <div class="card-header">
+      <i class="fa fa-area-chart"></i> Produits
+    </div>
+  
+    <div class="card-body" style="background-color: #EFEFEF;">
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <label>Photo</label>
+            <img src="https://www.webself.net/file/app/7/blog/photo-produit.png"class="img-thumbnail mb-2">
+            <input type="text" [(ngModel)]="product.image" name="image" class="form-control" placeholder="Photo URL">
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Nom</label>
+                  <input type="text" [(ngModel)]="product.productName" name="productName" class="form-control" placeholder="Nom">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Nom court</label>
+                  <input type="text" [(ngModel)]="product.shortProductName" name="shortProductName" class="form-control" placeholder="Nom court">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>prix de Base</label>
+                  <input type="text" [(ngModel)]="product.basePrice" name="basePrice" class="form-control" placeholder="prix de Base">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>prix de Vente</label>
+                  <input type="text" [(ngModel)]="product.sellingPrice" name="sellingPrice" class="form-control" placeholder="prix de Vente">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Remise</label>
+                  <input type="text" [(ngModel)]="product.discount" name="discount" class="form-control" placeholder="Remise">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>unite</label>
+                  <input type="text" [(ngModel)]="product.productUnit" name="productUnit" class="form-control" placeholder="Unite">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>quantite Initial</label>
+                  <input type="text" [(ngModel)]="product.initialQte" name="initialQte" class="form-control" placeholder="qteInitial">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>quantite Actuel</label>
+                  <input type="text" [(ngModel)]="product.currentQte" name="currentQte" class="form-control" placeholder="qteActuel">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="createProduct()">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

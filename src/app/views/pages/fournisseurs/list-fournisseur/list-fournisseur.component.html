@@ -1,0 +1,45 @@
+<div  id='cssmenu'>
+    <ul>
+      <li><a routerLink="/addfournisseur">Add fournisseur</a></li>
+      <li><a routerLink="/listFournisseurs">List fournisseurs</a></li>
+    </ul>
+  </div>
+
+
+
+  <br/><br/>
+  <div class="card material-table">
+    <div class="table-header">
+      <i class="fa fa-area-chart"> Fournisseurs</i>
+    </div>
+        <table id="datatable">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nom</th>
+              <th>ville</th>
+              <th>email</th>
+              <th>Telephone</th>
+              <th>Actions</th>
+          </tr>
+          </thead>
+        <tbody>
+          <tr *ngFor="let fournisseur of fournisseurs">
+            <td>{{ fournisseur.id }}</td>
+            <td>{{ fournisseur.nameSupplier }}</td>
+            <td>{{ fournisseur.supplierCity }}</td>
+            <td>{{ fournisseur.email }}</td>
+            <td>{{ fournisseur.PhoneNumber }}</td>
+            <td>
+            <button (click)="edit(fournisseur)" style="color: rgb(4, 131, 4);margin-left: 10px;
+            " class="glyphicon glyphicon-edit "></button>
+            <button (click)="delete(fournisseur)" style="color: rgb(238, 5, 5);margin-left: 10px;
+            " class="glyphicon glyphicon-trash"></button>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+
+
+

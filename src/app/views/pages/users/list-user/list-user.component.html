@@ -1,36 +1,43 @@
-<!-- Breadcrumbs-->
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">
-        <a href="#">Les utilisateurs</a>
-    </li>
-    <li class="breadcrumb-item active">Utilisateur</li>
-</ol>
-<div class="card mt-3">
-    <div class="card-header">
-        <i class="fa fa-area-chart"></i> Clients
-        <button class="btn btn-primary float-right" routerLink="clients/add">Ajouter</button>
-    </div>
-    <div class="card-body">
-        <table class="table table-bordered table-striped">
-        <tr>
-            <th>Id</th>
-            <th>Profils</th>
-            <th>Date creation</th>
-            <th>Photo</th>
-            <th>Email</th>
-            <th>Actions</th>
-        </tr>
-        <tr *ngFor="let user of users">
+<div  id='cssmenu'>
+    <ul>
+      <li><a routerLink="/adduser">Add user</a></li>
+      <li><a routerLink="/listUsers">List users</a></li>
+    </ul>
+  </div>
+
+
+
+  <br/><br/>
+      <div class="card material-table">
+        <div class="table-header">
+          <i class="fa fa-area-chart"> Utilisateurs</i>
+        </div>
+        <table id="datatable">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Profils</th>
+              <th>Date creation</th>
+              <th>Date fin</th>
+              <th>Email</th>
+              <th>Actions</th>
+          </tr>
+          </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
             <td>{{ user.id }}</td>
             <td>{{ user.profils }}</td>
             <td>{{ user.creationDate }}</td>
-            <td>{{ user.image }}</td>
+            <td>{{ user.endDate }}</td>
             <td>{{ user.email }}</td>
             <td>
-            <button (click)="edit(user)" type="button" class="btn btn-success">Editer</button>
-            <button (click)="delete(user)" type="button" class="btn btn-danger ml-2">Supprimer</button>
+            <button (click)="edit(user)" style="color: rgb(4, 131, 4);margin-left: 10px;
+            " class="glyphicon glyphicon-edit "></button>
+            <button (click)="delete(user)" style="color: rgb(238, 5, 5);margin-left: 10px;
+            " class="glyphicon glyphicon-trash"></button>
             </td>
         </tr>
+        </tbody>
         </table>
-    </div>
-</div>
+      </div>
+

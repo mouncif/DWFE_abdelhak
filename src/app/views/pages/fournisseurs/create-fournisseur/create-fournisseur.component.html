@@ -1,0 +1,83 @@
+<div id='cssmenu'>
+    <ul>
+        <li><a routerLink="/addfournisseur">Add fournisseur</a></li>
+        <li><a routerLink="/listFournisseurs">List fournisseurs</a></li>
+    </ul>
+</div>
+<br><br>
+
+<div class="card mb-3" style="background-color: #858585;">
+    <div class="card-header">
+        <i class="fa fa-area-chart"></i> Fournisseurs
+    </div>
+
+    <div class="card-body" style="background-color: #EFEFEF;">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nom</label>
+                        <input type="text" [(ngModel)]="fournisseur.nameSupplier" name="nameSupplier"
+                            class="form-control" placeholder="nameSupplier">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nom court</label>
+                        <input type="text" [(ngModel)]="fournisseur.shortSupplierName" name="shortSupplierName"
+                            class="form-control" placeholder="shortSupplierName">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>ville</label>
+                        <input type="text" [(ngModel)]="fournisseur.supplierCity" name="supplierCity"
+                            class="form-control" placeholder="supplierCity">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>PhoneFix </label>
+                        <input type="text" [(ngModel)]="fournisseur.PhoneFix" name="PhoneFix"
+                            class="form-control" placeholder="PhoneFix">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Telephone</label>
+                        <input type="text" [(ngModel)]="fournisseur.PhoneNumber" name="PhoneNumber"
+                            class="form-control" placeholder="PhoneNumber">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>fax</label>
+                        <input type="text" [(ngModel)]="fournisseur.faxSupplier" name="faxSupplier"
+                            class="form-control" placeholder="faxSupplier">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="text" [(ngModel)]="fournisseur.email" name="email" class="form-control"
+                            placeholder="email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Adresse</label>
+                        <textarea [(ngModel)]="fournisseur.adressSupplier" name="adressSupplier"
+                        class="form-control" placeholder="adressSupplier" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="createFournisseur()">Submit</button>
+        </form>
+    </div>
+</div>

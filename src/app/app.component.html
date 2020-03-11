@@ -1,43 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse d-flex bd-highlight" id="navbarTogglerDemo01">
-      <a class="navbar-brand p-2 flex-grow-1 bd-highlight" href="#">SmartVents</a>
-      <div class="nav-item">
-          <div class="row p-2 bd-highlight">
-              <a class="nav-link " href="#" target="_blank" rel="noopener" aria-label="GitHub">
-                  <i class="fas fa-lg fa-ellipsis-v"></i>
-              </a>
-              <a class="nav-link" href="#" target="_blank" rel="noopener" aria-label="GitHub">
-                  <i class="fa fa-lg fa-bell"></i>
-                  <span class="notification-badge badge badge-dark">1</span>
-              </a>
-              <a class="nav-link" href="#" target="_blank" rel="noopener" aria-label="GitHub">
-                  <i class="fas fa-lg fa-cog"></i>
-              </a>
-          </div>
+
+<body>
+    <nav class="navbar navbar-default no-margin light">
+        
+        <div class="collapse navbar-collapse d-flex bd-highlight" id="navbarTogglerDemo01">
+            <a class="navbar-brand p-2 flex-grow-1 bd-highlight" style="cursor: pointerp;"><strong>SmartVents</strong></a>
+            <a href="#"><i class="glyphicon glyphicon-cog" style="float: right; color: rgb(66, 65, 65); padding: 19px;"></i></a>
+            <a href="#"><i class="glyphicon glyphicon-bell" style="float: right; color: rgb(66, 65, 65); padding: 19px;"></i></a>
+            <a href="#"><i class="glyphicon glyphicon-option-vertical" style="float: right; color: rgb(66, 65, 65); padding: 19px;"></i></a>
+        </div>
+    </nav>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper" style="position: absolute; height: 140%;">
+        <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+  
+          <li>
+            <a routerLink="/listUsers"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;&nbsp;Utilisateurs</a>
+          </li>
+          <li>
+            <a routerLink="/listProducts"><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;&nbsp;&nbsp;Produits</a>
+          </li>
+          <li>
+            <a routerLink="/listClients"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;&nbsp;Clients</a>
+          </li>
+          <li>
+            <a routerLink="/listFournisseurs"><i class="glyphicon glyphicon-briefcase"></i>&nbsp;&nbsp;&nbsp;Fournisseurs</a>
+          </li>
+        </ul>
       </div>
-  </div>
-</nav>
-<div class="container-fluid ">
-    <div class="row">
-        <div class="col-2 collapse show d-md-flex bg-dark pt-2 pl-0 min-vh-100" id="sidebar">
-            <ul class="nav flex-column flex-nowrap overflow-hidden">
-                <li class="nav-item">
-                    <a class="nav-link text-truncate" href="#"><i class="fa fa-home"></i> <span class="d-none d-sm-inline">Utilisateurs</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-truncate" href="#"><i class="fa fa-bar-chart"></i> <span class="d-none d-sm-inline">Produits</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-truncate" href="#"><i class="fa fa-download"></i> <span class="d-none d-sm-inline">Clients</span></a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-10">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
+
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Dossier</a></li>
+      </ul>
+      <div class="col-lg-12">
+        <router-outlet></router-outlet>
+       </div>
+      </div>
+  </body>

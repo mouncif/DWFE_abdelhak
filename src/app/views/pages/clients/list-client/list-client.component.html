@@ -1,0 +1,45 @@
+<div  id='cssmenu'>
+    <ul>
+      <li><a routerLink="/addclient">Add client</a></li>
+      <li><a routerLink="/listClients">List clients</a></li>
+    </ul>
+  </div>
+
+
+
+  <br/><br/>
+  <div class="card material-table">
+    <div class="table-header">
+      <i class="fa fa-area-chart"> Clients</i>
+    </div>
+        <table id="datatable">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>lastName</th>
+              <th>Image</th>
+              <th>tel</th>
+              <th>city</th>
+              <th>Actions</th>
+          </tr>
+          </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td>{{ client.id }}</td>
+            <td>{{ client.lastName }}</td>
+            <td><img src="{{ client.image }}" style="    width: 60px;
+              margin-bottom: 5px;" alt=""></td>
+            <td>{{ client.phoneNumber }}</td>
+            <td>{{ client.city }}</td>
+            <td>
+            <button (click)="edit(client)" style="color: rgb(4, 131, 4);margin-left: 10px;
+            " class="glyphicon glyphicon-edit "></button>
+            <button (click)="delete(client)" style="color: rgb(238, 5, 5);margin-left: 10px;
+            " class="glyphicon glyphicon-trash"></button>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+
+

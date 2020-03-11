@@ -5,4 +5,5 @@ export interface User {
     endDate:Date;
     image:string;
     email:string;
+    identifiant: string;
 }

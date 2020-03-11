@@ -8,7 +8,15 @@ import { User } from '../modelsUsers/user';
 export class UsersService {
 
   private url = "http://localhost:3000/users"
-
+  private user: User={
+    id: null,
+    identifiant:'',
+    creationDate:null,
+    email:'',
+    image:'',
+    endDate:null,
+    profils:''
+  };
   constructor(private http: HttpClient) { }
 
   findAll(){
@@ -17,5 +25,17 @@ export class UsersService {
 
   delete(id){
     return this.http.delete(`${this.url}/${id}`);
+  }
+  addUser(user: User){
+    return this.http.post(this.url, user);
+  }
+  editUser(user: User){
+    return this.http.put(this.url+'/'+user.id, user);
+  }
+  getter(){
+    return this.user;
+  }
+  setter(user: User){
+    this.user = user;
   }
 }

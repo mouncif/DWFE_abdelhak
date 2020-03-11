@@ -1,0 +1,78 @@
+<div  id='cssmenu'>
+    <ul>
+        <li><a routerLink="/addclient">Add product</a></li>
+        <li><a routerLink="/listClients">List products</a></li>
+      </ul>
+  </div>
+<br><br>
+
+<div class="card mb-3" style="background-color: #858585;">
+    <div class="card-header">
+      <i class="fa fa-area-chart"></i> Clients
+    </div>
+  
+    <div class="card-body" style="background-color: #EFEFEF;">
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <label>Photo</label>
+            <img src="https://u.realgeeks.media/sfnmhomes/person-gray-photo-placeholder-woman-vector-22964655.jpg"class="img-thumbnail mb-2">
+            <input type="text" [(ngModel)]="client.image" name="image" class="form-control" placeholder="Photo URL">
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Nom</label>
+                  <input type="text" [(ngModel)]="client.lastName" name="nom" class="form-control" placeholder="Nom">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Prenom</label>
+                  <input type="text" [(ngModel)]="client.firstName" name="Prenom" class="form-control" placeholder="Prenom">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>statut</label>
+                  <input type="text" [(ngModel)]="client.statut" name="statut" class="form-control" placeholder="statut">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Tel </label>
+                  <input type="text" [(ngModel)]="client.phoneNumber" name="Telephone" class="form-control" placeholder="Telephone">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>E-mail</label>
+                  <input type="text" [(ngModel)]="client.email" name="email" class="form-control" placeholder="email">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Adresse</label>
+                  <input type="text" [(ngModel)]="client.adress" name="Adresse" class="form-control" placeholder="Adresse">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Ville</label>
+                  <input type="text" [(ngModel)]="client.city" name="ville" class="form-control" placeholder="ville">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="createClient()">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

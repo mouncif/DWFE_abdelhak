@@ -1,20 +1,129 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "profils": "user",
-        "creationDate": "2018-01-09",
-        "endDate":"2019-01-09",
-         "image":"ff.png",
-         "email":"fatima@gmail.com"
-      },
-      {
-        "id": 2,
-        "profils": "user",
-        "creationDate": "2018-01-09",
-        "endDate":"2019-01-09",
-         "image":"ff.png",
-         "email":"majda@gmail.com"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "profils": "EDITOR",
+      "creationDate": "2018-01-09",
+      "endDate": "2019-01-09",
+      "image": "ff",
+      "email": "fatimaAs@gmail.com",
+      "identifiant": "asmae"
+    },
+    {
+      "id": 2,
+      "identifiant": "p",
+      "creationDate": "2020-03-12",
+      "email": "1",
+      "image": "lol",
+      "endDate": "2020-03-22",
+      "profils": "ADMIN"
+    },
+    {
+      "id": 3,
+      "identifiant": "naima",
+      "creationDate": "2020-03-17",
+      "email": "naima@gmail.com",
+      "image": "sos",
+      "endDate": "2020-03-26",
+      "profils": "USER"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "cosmeciii",
+      "shortProductName": "cos",
+      "basePrice": "056",
+      "ellingPrice": "56",
+      "discount": "400",
+      "productUnit": "4",
+      "image": "",
+      "initialQte": "67",
+      "currentQte": "435",
+      "sellingPrice": "1526"
+    },
+    {
+      "id": 2,
+      "productName": "pinkies",
+      "shortProductName": "p",
+      "basePrice": "8563",
+      "sellingPrice": "215487",
+      "discount": "65",
+      "productUnit": "dfghj",
+      "image": "",
+      "initialQte": "52358963",
+      "currentQte": "5623"
+    },
+    {
+      "id": 3,
+      "productName": "dfghjk",
+      "shortProductName": "fghjkl",
+      "basePrice": "74",
+      "sellingPrice": "42239",
+      "discount": "12",
+      "productUnit": "$",
+      "image": "",
+      "initialQte": "126",
+      "currentQte": "74123"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "lastName": "sdklhgiuzeh",
+      "firstName": "kdfjioer",
+      "statut": "Statut 3",
+      "image": "https://lh3.googleusercontent.com/proxy/92qLIRZU1-1X06UWZBJVm65j1lwKN4unmag8vMvYw3e7nUe01QMUAOfuN1jts93YBlWIk-pWR6VYt4ac8EYCBxr0zs9Bz2NQKnExKh72tuM6_kjkNUTD3vGoKZm5c_RX4m-PwDPzdg",
+      "phoneNumber": "4567890987657",
+      "email": "kdfji@kldjryioerio.com",
+      "adress": "sdjghsdkj",
+      "city": "sdgre"
+    },
+    {
+      "id": 4,
+      "lastName": "pinkies",
+      "firstName": "p",
+      "statut": "femme",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1024px-User_icon_2.svg.png",
+      "phoneNumber": "01588898456",
+      "email": "pinkies@gmail.com",
+      "adress": "hay l andalouss casa",
+      "city": "casa"
+    },
+    {
+      "id": 5,
+      "lastName": "pinkies",
+      "firstName": "p",
+      "statut": "bgfydtyh",
+      "image": "https://img.icons8.com/officel/2x/user.png",
+      "phoneNumber": "52752465786",
+      "email": "pinkies@hfjkhkl.com",
+      "adress": "fdhjgkhfh",
+      "city": "dfgh"
+    }
+  ],
+  "fournisseurs": [
+    {
+      "id": 1,
+      "nameSupplier": "hmadi",
+      "shortSupplierName": "ham",
+      "supplierCity": "casa",
+      "adressSupplier": "hay mulay said",
+      "PhoneFix": "054892268",
+      "PhoneNumber": "0654878921",
+      "faxSupplier": "+21258796",
+      "email": "hmadi@gmail.com"
+    },
+    {
+      "id": 2,
+      "nameSupplier": "glhfyju",
+      "shortSupplierName": "bh",
+      "supplierCity": "yulgftyd",
+      "adressSupplier": "jkbkhgftg",
+      "PhoneFix": "00154152",
+      "PhoneNumber": "0524186465",
+      "faxSupplier": "2156",
+      "email": "ygtytg@hftg"
+    }
+  ]
+}
